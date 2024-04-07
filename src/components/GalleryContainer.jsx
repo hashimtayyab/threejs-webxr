@@ -1,6 +1,5 @@
 import { Canvas } from "@react-three/fiber";
-import { ARButton, RayGrab, XR } from "@react-three/xr";
-import React, { useEffect, useRef, useState } from "react";
+import { ARButton, Controllers, Hands, XR } from "@react-three/xr";
 import Gallery from "./Gallery";
 
 const GalleryContainer = () => {
@@ -76,6 +75,8 @@ const GalleryContainer = () => {
       }} />
       <Canvas >
         <XR>
+        <Controllers />
+        {/* <Hands/> */}
             <Gallery/>
         </XR>
       </Canvas>
